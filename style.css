@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.encriptador{
+    background-color: #E9ECF8;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.encriptador__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .encriptador__container {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 7rem;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .header {
+        height: 90vh;
+        width: 15rem;
+        margin: 2rem 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+.logo{
+    width: auto;
+}
+.logo__img{
+    object-fit: contain;
+}
+.entry{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .entry {
+        margin-top: 2rem;
+        max-width: 45rem;
+    }
+}
+.entry__input{
+    background-color: #E9ECF8;
+    border: none;
+    font-size: 2rem;
+    height: 90%;
+    padding: .5rem;
+    resize: none;
+    color: #0A3871;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .entry__input {
+        height: 60vh;
+        /* width: 40rem; */
+        margin-top: 4rem;
+    }
+}
+.entry__desc{
+    font-size: 0.75rem;
+    color: #495057 ;
+    display: flex;
+    align-items: center;
+}
+.entry__desc img {
+    width: .75rem;
+    height: .75rem;
+    margin: 0 .5rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 2rem;
+}
+/*Tablet*/
+@media (min-width: 768px) {
+    .buttons {
+        flex-direction: row;
+    }
+}
+.button {
+    font-size: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button:hover {
+    cursor: pointer;
+}
+.encriptar {
+    color: #ffffff;
+    background-color: #0A3871;
+}
+.encriptar:hover {
+    background-color: #356EA9;
+}
+.desencriptar {
+    border: 1px solid #0A3871;
+    background-color: #E9ECF8;
+    color: #0A3871;
+}
+.desencriptar:hover {
+    background-color: #F3F5FC;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    gap: 2rem;border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    display: none;
+    font-size: 1.5rem;
+
+}
+.output__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+}
+.output__copy{
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #0A3871;
+    margin-top: 2rem;
+    color: #0A3871;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.output__copy:hover {
+    background-color: #E9ECF8;
+    cursor: pointer;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    display: none;
+    font-size: 1.5rem;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .message {
+        font-size: 2rem;
+        justify-content: center;
+        max-width: 25rem;
+    }
+}
+
+.message__img {
+    display: none;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .message__img {
+        display: unset;
+        width: 21rem;
+        height: 19rem;
+    }
+}
+
+
+
+.message__title{
+    color: #000000;
+}
+
+
+.message__desc{
+    color: #495057;
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .message__desc {
+        font-size: 1rem;
+    }
+}
+
+.active {
+    display: flex;
+}
+
+.alert {
+    display: flex;
+    position: relative;
+    margin: auto;
+    top: -30rem;
+    border-radius: 1.5rem;
+    color: #F3F5FC;
+    font-weight: 900;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: rgb(170, 64, 64);
+    padding: 1.5rem ;
+    width: 75%;
+    
+    transition: all .2s ease-in;
+}

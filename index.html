@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Encriptador</title>
+  </head>
+  <body class="encriptador">
+    <div class="container">
+      <div class="encriptador__container">
+
+    <!-- Header  -->
+        <header class="header">
+          <div class="logo">
+            <img
+              class="logo__img"
+              src="/src/assets/Logo.png"
+              alt=""
+              class="logo__img"
+            />
+          </div>
+        </header>
+
+    <!-- Campo para ingreso de texto -->
+        <div class="entry entry__textarea">
+          <textarea
+            class="entry__input"
+            name=""
+            id="entry"
+            placeholder="Ingrese el texto aqui"
+            cols="100%"
+            rows="10"
+          ></textarea>
+          <p class="entry__desc">
+            <img src="./src/assets/bi_exclamation-circle-fill.png" />Solo letras
+            minúsculas y sin acentos
+          </p>
+
+          <!-- Botones para encriptar y desencriptar -->
+          <div class="buttons">
+            <input 
+              class="button encriptar" 
+              type="button"
+              value="Encriptar"
+              id="encriptar"
+              />
+              <input
+              class="button desencriptar"
+              type="button"
+              value="Desencriptar"
+              id="desencriptar"
+            />
+          </div>
+        </div>
+
+    <!-- Output desencriptado -->
+        <div class="output">
+          <div class="output__text">
+            <p class="message__desc" id="output" >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus,
+              dolorem. Mollitia aut eveniet, reprehenderit praesentium
+              temporibus qui aliquam obcaecati fugit ab aperiam sequi ex
+              similique illo laborum, illum aliquid quisquam!
+            </p>
+            <button id="copy" class="output__copy">Copiar</button>
+            <!-- <button onclick="copiarFunction()">Copiar</button>   -->
+          </div>
+        </div>
+
+        <!-- Mensaje que no se encontró nada -->
+        <div class="message active" id="message">
+          <img class="message__img" src="./src/assets/Muñeco.png" alt="Persona buscando" />
+          <h2 class="message__title">Ningún mensaje fue encontrado</h2>
+          <p class="message__desc">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+  <script src="/app.js">
+  </script>
+
+</html>
